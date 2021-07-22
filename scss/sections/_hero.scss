@@ -1,0 +1,147 @@
+@use '../components/mixins'as *;
+@use '../custom'as *;
+
+
+
+
+#welcome-section{
+
+    height: 100vh;
+}
+.my-waves-1{
+@include gradient
+}
+.hero-section {
+    position: relative;
+    @include gradient;
+    // height: 100vh;
+
+
+    nav{
+        // border: 2px solid red;
+        position: fixed;
+        z-index: 9999;
+        left: 0;
+        top: 0;
+        ul{
+            a{
+                @include media-breakpoint-down(lg){
+                    text-shadow: 4px 4px 5px black;
+
+                }
+            }
+
+        }
+
+
+
+    }
+    
+
+    .logo {
+
+        height: 2.5em;
+        width: 2.5em;
+
+        @include media-breakpoint-up(md) {
+            height: 4em;
+            width: 4em;
+
+        }
+    }
+
+    .hero-contect {
+        // margin: 20em auto auto auto;
+        @include absoluteCenter;
+
+
+
+        color: white;
+
+        h1 {
+            font-family: 'Open Sans', sans-serif;
+            @include media-breakpoint-down(sm){
+                font-size: 2rem;
+            }
+        }
+
+        p {
+            opacity: 66%;
+            font-family: 'Poppins', sans-serif;
+        }
+    }
+
+
+    ul {
+
+        @include media-breakpoint-down(lg) {
+            display: flex;
+            align-items: flex-end;
+            // border: 2px red solid;
+
+            a {
+                color: white !important;
+                margin: auto 0.5em;
+            }
+
+            li {
+                border-radius: 50px;
+                text-align: right;
+
+                &:hover {
+
+                    background-color: $red;
+                }
+            }
+        }
+
+        @include media-breakpoint-up(lg) {
+
+            border-radius: 50px;
+            z-index: 999;
+            background-color: $whity;
+            justify-content: space-evenly;
+
+            li {
+                text-align: center;
+                width: 100%;
+
+
+                a {
+                    color: black !important;
+                    width: 8em;
+
+                }
+
+                &:hover {
+
+                    .home-item {
+                        border-top-left-radius: 50px;
+                        border-bottom-left-radius: 50px;
+                        background-color: $red;
+
+                    }
+
+                    .projects-item {
+                        background-color: $red;
+                    }
+
+                    .contact-item {
+                        border-top-right-radius: 50px;
+                        border-bottom-right-radius: 50px;
+                        background-color: $red;
+                    }
+
+
+                    a {
+                        color: white !important;
+                    }
+                }
+
+            }
+        }
+    }
+
+
+}
+

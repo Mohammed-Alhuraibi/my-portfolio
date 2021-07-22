@@ -1,0 +1,92 @@
+@use '../custom'as *;
+@use '../components/mixins'as *;
+
+
+.my-waves-2 {
+    @include gradient;
+}
+
+
+.contact {
+    @include gradient;
+    height: 100%;
+
+    h1 {
+        font-family: 'Poppins', sans-serif;
+
+    }
+
+    form {
+        font-family: 'Open Sans', sans-serif;
+        input{
+            background-color: $whity;
+        }
+        textarea{
+            background-color: $whity;
+
+
+        }
+
+    }
+
+    .my-btn {
+
+        button{
+            background-color:white;
+            font-size: 1.2rem;
+            @include media-breakpoint-up(sm){
+                font-size: 1.5em;
+
+            }
+
+            i{
+                color: $red !important;
+                font-size: 1em;
+                @include media-breakpoint-up(sm){
+                    font-size: 1em;
+    
+                }
+            }
+            
+            &:hover{
+                background-color:rgb(8, 211, 8);
+                color: white;
+
+                i{
+                    color:$primary-dark !important;
+                }
+            }
+        }
+
+
+    }
+
+
+    // my-media accounts start
+
+    .my-media{
+        text-align: center;
+
+        h1{
+            font-family: 'Poppins', sans-serif;
+        }
+        a{
+            color: unset;
+        }
+        
+        i{
+            font-size: 4em;
+            color: $red;
+            margin-top: 1em;
+            &:hover{
+                color: white;
+            }
+
+            @include media-breakpoint-down(sm){
+                font-size: 3em;
+
+            }
+        }
+    }
+
+}

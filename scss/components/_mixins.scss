@@ -1,0 +1,22 @@
+@use  '../custom' as *;
+
+@mixin gradient { 
+    background:linear-gradient(to right,rgba($primary-dark,1),rgba($secondary-gray,1));  
+}
+
+@mixin absoluteCenter{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%,-50%);
+    
+}
+
+@mixin transationForImg{
+    transition:500ms ease-in-out 100ms ;
+    transform: scale(1.5);
+}
+@mixin transationForHover{
+    transition:500ms ease-in-out 100ms ;
+
+}
